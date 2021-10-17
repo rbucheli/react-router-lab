@@ -1,3 +1,5 @@
+// Route for this is "/stocks/symbol"
+// Refer back to Price.js in Crypto Lecture
 import React from "react";
 
 const Stocks = (props) => {

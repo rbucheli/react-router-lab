@@ -1,26 +1,32 @@
 import React from "react";
-import './App.css';
+import "./App.css";
 // Import route and components
-import { Route } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
+import Header from "./components/Header";
 import About from "./pages/About";
-import Main from "./pages/Main";
+import Home from "./pages/Home";
 import Stocks from "./pages/Stocks";
-import Nav from "./components/Nav";
-
+import Dashboard from "./pages/Dashboard";
 
 function App() {
   return (
     <div className="App">
-      <Nav />
-      <Route path="/">
-        <Main />
-      </Route>
-      <Route path="/stocks">
-        <Stocks />
-      </Route>
-      <Route path="/about">
-        <About />
-      </Route>
+      <Header />
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/stocks">
+          <Dashboard />
+        </Route>
+        <Route
+          path="/stocks/:symbol"
+          render={(routerProps) => <Stocks {...routerProps} />}
+        />
+        <Route path="/about">
+          <About />
+        </Route>
+      </Switch>
     </div>
   );
 }
