@@ -7,6 +7,7 @@ import About from "./pages/About";
 import Home from "./pages/Home";
 import Stocks from "./pages/Stocks";
 import Dashboard from "./pages/Dashboard";
+import stocks from "./data.json";
 
 function App() {
   return (
