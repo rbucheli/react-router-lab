@@ -20,7 +20,7 @@ const Dashboard = (props) => {
         const { name, symbol } = value;
 
         return (
-          <Link to={`/stocks/${symbol}`}>
+          <Link to={`/stock/${symbol}`}>
             <h2>{name}</h2>
           </Link>
         );

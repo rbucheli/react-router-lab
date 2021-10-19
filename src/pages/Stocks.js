@@ -1,17 +1,20 @@
 // Route for this is "/stocks/symbol"
 // Refer back to Price.js in Crypto Lecture
 import React from "react";
-import stocks from "../data.json"
+import stockData from "../data.json";
 
 const Stocks = (props) => {
-  const stock = props.stocks.filter(stocks => stocks.symbol === props.match.params.symbol)[0]
+  const stockMatch = stockData.filter(stock => stock.symbol === props.match.params.symbol)[0];
   
   return (
     <div>
       <h2>
-        Name: {stock.name}
+        Name: {stockMatch.name}
       </h2>
-      </div>
+      <h2>  
+        Price: {stockMatch.lastPrice}
+      </h2>
+    </div>
     )
 };
 

@@ -7,7 +7,7 @@ import About from "./pages/About";
 import Home from "./pages/Home";
 import Stocks from "./pages/Stocks";
 import Dashboard from "./pages/Dashboard";
-import stocks from "./data.json";
+// import stockData from "./data.json";
 
 function App() {
   return (
@@ -21,7 +21,7 @@ function App() {
           <Dashboard />
         </Route>
         <Route
-          path="/stocks/:symbol"
+          path="/stock/:symbol"
           render={(routerProps) => <Stocks {...routerProps} />}
         />
         <Route path="/about">
